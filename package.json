@@ -1,5 +1,5 @@
 {
-  "name": "progect-ng1",
+  "name": "my-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,8 +19,18 @@
     "@angular/platform-browser": "~10.1.5",
     "@angular/platform-browser-dynamic": "~10.1.5",
     "@angular/router": "~10.1.5",
+    "@fortawesome/angular-fontawesome": "^0.7.0",
+    "@popperjs/core": "^2.5.3",
+    "@types/jquery": "^3.5.4",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^4.5.3",
+    "fontawesome": "^5.6.3",
+    "fontawesome-icons-list": "^4.5.1",
+    "jquery": "^3.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "web-animations-js": "^2.3.2",
+    "wow.js": "^1.2.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "progectNg1": {
+    "myApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "css"
         }
       },
       "root": "",
@@ -17,20 +17,29 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/progectNg1",
+            "outputPath": "dist/myApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/wow.js/css/libs/animate.css",
+              "src/assets/styles/fontgoogle.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/scripts/jquery-3.5.1.js",
+              "src/assets/scripts/headroom.min.js",
+              "node_modules/wow.js/dist/wow.min.js",
+              "src/assets/scripts/progresscircle.js",
+              "src/assets/scripts/poppercarma.js",
+              "src/assets/scripts/bootstrapcarma.js",
+              "src/assets/scripts/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +75,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "progectNg1:build"
+            "browserTarget": "myApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "progectNg1:build:production"
+              "browserTarget": "myApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "progectNg1:build"
+            "browserTarget": "myApp:build"
           }
         },
         "test": {
@@ -87,13 +96,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -105,24 +109,23 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "progectNg1:serve"
+            "devServerTarget": "myApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "progectNg1:serve:production"
+              "devServerTarget": "myApp:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "progectNg1"
+    }
+  },
+  "defaultProject": "myApp"
 }
